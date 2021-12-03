@@ -1,0 +1,14 @@
+@import "global.scss";
+.song-list{
+  padding: 200px 140px 50px 140px;
+}
+.el-table{
+  border-radius: 0 0 10px 10px;
+}
+.el-header{
+  border-radius: 10px 10px 0 0;
+}
+.pagination {
+  @include layout(center);
+  transform: translateY(15px);
+}

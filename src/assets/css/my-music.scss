@@ -1,0 +1,86 @@
+@import "var.scss";
+
+.my-music {
+  padding-top: $header-height;
+  background-color: $theme-background-color;
+}
+/*左侧*/
+.album-slide {
+  background-color: $color-white;
+  height: 200px;
+  width: 90%;
+  padding-top: 50px;
+  padding-left: 150px;
+  margin-bottom: -150px;
+  box-shadow: $box-shadow;
+  // 图片
+  .album-img {
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: $color-white;
+    border: 1px solid $color-grey;
+    img {
+      width: 100%;
+    }
+  }
+
+  /*信息*/
+  .album-info {
+    display: inline-block;
+    padding-left: 40px;
+    .album-username {
+      font-size: 50px;
+      margin-bottom: 23px;
+    }
+    .album-button {
+      float: right;
+      display: inline-block;
+      position: relative;
+      top: 15px;
+      margin-left: 20px;
+    }
+    .album-list {
+      list-style-type: none;
+      font-size: 15px;
+      color: $color-grey;
+    }
+  }
+}
+
+/*歌单内容*/
+.album-content {
+  margin-left: 300px;
+  padding: 40px 100px;
+  /*歌单题目*/
+  .album-title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .songs-body {
+    margin-top: 50px;
+  }
+}
+
+.my-list {
+  background-color: $color-white;
+  min-width: 800px;
+  margin: 30px 150px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  .my-list-title {
+    background-color: #f6ad8f;
+    width: 100%;
+    height: 80px;
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+  }
+}

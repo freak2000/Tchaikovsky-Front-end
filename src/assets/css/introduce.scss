@@ -1,0 +1,114 @@
+@import "var.scss";
+
+//.singer-album{
+//  background-color: #f6ad8f!important;
+//}
+
+ul,
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+.singer-album {
+  padding-top: $header-height + 150px;
+  background-color: $theme-background-color;
+}
+
+/*左*/
+.album-slide {
+  display: inline-block;
+  float: left;
+  width: 500px;
+
+  .singer-img {
+    position: relative;
+    display: inline-block;
+    height: 600px;
+    width: 450px;
+    top: -100px;
+    left: 50px;
+    border-radius: 10%;
+    overflow: hidden;
+    border: 5px solid $color-white;
+    background-color: $color-white;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.des{
+  position: relative;
+  top: -100px;
+  display: inline-block;
+  left: 65px;
+  width: 40%;
+  overflow: hidden;
+  .rus{
+    border: 1px solid #eaecf0;
+    top: 15px;
+    width: 20px;
+  }
+}
+
+.nav{
+  top: 130px;
+  position: fixed;
+  right: 35px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.el-submenu{
+  display: block;
+}
+
+.el-select-group__title{
+  display: block;
+}
+
+.album-content {
+
+  padding: 170px 270px 170px 150px;
+  .intro {
+    border-radius: 10px;
+    padding:50px 20px 50px 50px;
+    background-color: #fff;
+    font-size: 20px;
+    .para-title {
+      display: block;
+      padding-bottom: 5px;
+    }
+    .text{
+      text-indent: 2em;
+      padding-bottom: 65px;
+      color: #000000;
+      font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+      font-size: 20px;
+      //color: rgba(0, 0, 0, 0.5);
+    }
+    ul{
+      padding-bottom: 50px;
+    }
+    li{
+      display: block;
+      list-style: square;
+      padding:10px 0 0 20px;
+      a{
+        text-decoration: none;
+        color: #67757f;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 50px;
+  }
+}
+
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 400px;
+}
+

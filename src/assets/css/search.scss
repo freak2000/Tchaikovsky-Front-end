@@ -1,0 +1,25 @@
+@import "var.scss";
+.search {
+  padding-top: $header-height;
+  background-color: $theme-background-color;
+  .nav {
+    text-align: center;
+    background-color: $color-white;
+    height: 70px;
+    width: 100%;
+    padding-top: 50px;
+    margin-bottom: -150px;
+    box-shadow: $box-shadow;
+    clear: both;
+  }
+  .res {
+    text-align: center;
+    .content-list {
+
+      min-width: 800px;
+      max-width: 1200px;
+      padding-top: $header-height+100px !important;
+      margin: 0 auto;
+    }
+  }
+}

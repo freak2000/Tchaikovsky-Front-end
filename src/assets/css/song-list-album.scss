@@ -1,0 +1,67 @@
+@import "var.scss";
+
+
+.song-list-album {
+  padding-top: $header-height;
+}
+.album-slide {
+  background-color: $color-white;
+  height: 250px;
+  width: 90%;
+  padding-top: 50px;
+  padding-left: 150px;
+  margin-bottom: -150px;
+  box-shadow: $box-shadow;
+  // 图片
+  .album-img {
+    //height: 150px;
+    //width: 150px;
+    display: inline-block;
+    position: relative;
+    //border-radius: 5px;
+    //background-color: $color-white;
+    //border: 1px solid $color-grey;
+    //img {
+    //  width: 100%;
+    //}
+  }
+
+  /*信息*/
+  .album-info {
+    display: inline-block;
+    padding-left: 40px;
+    position: relative;
+    bottom: 20px;
+    .album-username {
+      max-width: 500px;
+      font-size: 30px;
+      margin-bottom: 23px;
+    }
+    .album-button {
+      float: right;
+      display: inline-block;
+      position: relative;
+      top: 15px;
+    }
+    .album-list {
+      list-style-type: none;
+      font-size: 15px;
+      color: $color-grey;
+      li {
+        //padding-bottom: 5px;
+      }
+    }
+  }
+  .album-button {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 70px;
+    bottom: 75px;
+    svg {
+      vertical-align: middle;
+    }
+  }
+}
+
+
