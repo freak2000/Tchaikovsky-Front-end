@@ -5,8 +5,25 @@
   width: 100%;
   height: $footer-height;
   background-color: $theme-footer-color;
-  @include layout(center, center, column);
-  p {
-    height: 30px;
+  margin: 0 auto;
+  .container {
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: 70px auto 20px auto;
+    .footer-img {
+      align-items: center;
+      align-content: center;
+      display: inline;
+      padding-left: 10px;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  .footer-text {
+    width: 200px;
+    margin: 0 auto;
   }
 }

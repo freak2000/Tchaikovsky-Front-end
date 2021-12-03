@@ -29,7 +29,6 @@
 <script>
 import mixin from '../mixins'
 import {ICON} from '../assets/icon'
-import {swiperList} from '../assets/data/swiper'
 export default {
   name: 'content-list',
   mixins: [mixin],
@@ -45,7 +44,6 @@ export default {
   data () {
     return {
       BOFANG: ICON.BOFANG,
-      swiperList: swiperList,
       portfolio: [],
       currentPage: 1,
       pageSize: 15 // 每页个数

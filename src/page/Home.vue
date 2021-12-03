@@ -2,47 +2,40 @@
   <div class="home">
     <el-carousel class="swiper-container" :interval="444444000" type="card" height="530px">
       <el-carousel-item v-for="(item,index) in carousel" :key="index">
-        <img :src="$target + item.imgPath" alt=""/>
+        <a href="">
+          <img :src="$target + item.imgPath" alt=""/>
+        </a>
       </el-carousel-item>
     </el-carousel>
     <!--热门歌单-->
     <div class="section">
-      <div class="section-title">歌单</div>
-      <content-list  path="song-list-album"></content-list>
-    </div>
-    <!--热门单曲-->
-    <div class="section">
-      <div class="section-title">单曲</div>
-      <content-list  path="singer-album"></content-list>
+      <div class="section-title">热门歌单</div>
+      <content-list  :content-list="headerPortfolio" path="song-list-album"></content-list>
     </div>
   </div>
 </template>
 
 <script>
+import {homePortfolio} from '../assets/data/home-portfolio'
 import ContentList from '../components/ContentList'
+import SongTable from '../components/SongTable'
 import {HttpManager} from '../api'
 export default {
   name: 'Home',
   components: {
-    ContentList
+    ContentList,
+    SongTable
   },
   data () {
     return {
       carousel: '',
       songList: [],
-      singleSong: []
+      singleSong: [],
+      headerPortfolio: homePortfolio
     }
   },
   created () {
     this.getCarousel()
-    // this.$axios.get('/carousel')
-    //   .then(res => {
-    //     console.log(res)
-    //     this.carousel = res.data.carousel
-    //   })
-    //   .catch(err => {
-    //     return Promise.reject(err)
-    //   })
   },
   methods: {
     getCarousel () {
