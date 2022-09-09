@@ -122,6 +122,9 @@ export default {
       if (this.likeList === null) {
         return this.MEIXIHUAN
       }
+      if (this.likePortfolio === null) {
+        return this.MEIXIHUAN
+      }
       for (let i = 0; i < this.likePortfolio.length; i++) {
         if (this.likePortfolio[i].portfolio_id === this.tempList.portfolio_id) {
           return this.XIHUAN

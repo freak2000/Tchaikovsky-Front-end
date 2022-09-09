@@ -206,6 +206,7 @@ export default {
       'setLikeList'
     ]),
     likeOrNot () {
+      if (this.likeList === null) return this.MEIXIHUAN
       for (let i = 0; i < this.likeList.length; i++) {
         if (this.likeList[i].song_id === this.id) {
           return this.XIHUAN

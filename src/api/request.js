@@ -1,5 +1,10 @@
 import axios from 'axios'
 
+
+const service = axios.create({
+  baseURL: '/api',
+  timeout: 5000
+})
 /**
  * 封装get方法
  * @param url
@@ -8,7 +13,7 @@ import axios from 'axios'
  */
 export function get (url, params = {}, responseType = 'json') {
   return new Promise((resolve, reject) => {
-    axios.get(url, {
+    service.get(url, {
       params: params,
       responseType
     })
@@ -30,7 +35,7 @@ export function get (url, params = {}, responseType = 'json') {
  */
 export function post (url, data = {}, config = {}) {
   return new Promise((resolve, reject) => {
-    axios.post(url, data, config)
+    service.post(url, data, config)
       .then(response => {
         resolve(response.data)
       }, err => {
@@ -47,7 +52,7 @@ export function post (url, data = {}, config = {}) {
  */
 export function deletes (url, data = {}) {
   return new Promise((resolve, reject) => {
-    axios.delete(url, data)
+    service.delete(url, data)
       .then(response => {
         resolve(response.data)
       }, err => {
@@ -64,7 +69,7 @@ export function deletes (url, data = {}) {
  */
 export function put (url, data = {}) {
   return new Promise((resolve, reject) => {
-    axios.put(url, data)
+    service.put(url, data)
       .then(response => {
         resolve(response.data)
       }, err => {

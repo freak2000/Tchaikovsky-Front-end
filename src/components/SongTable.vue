@@ -3,7 +3,7 @@
     <el-header>全部作品</el-header>
     <el-table
       ref="singleTable"
-      :data="data"
+      :data="songData"
       :row-class-name="setRowIndex"
       @cell-click="toPlay"
       style="width: 100%">
@@ -94,7 +94,7 @@ export default {
       'listIndex',
       'listOfSongs'
     ]),
-    data () {
+    songData () {
       return this.songTable.slice((this.currentPage - 1) * this.pageSize, this.currentPage * this.pageSize)
     }
   },
