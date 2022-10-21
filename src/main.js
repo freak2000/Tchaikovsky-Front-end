@@ -8,10 +8,8 @@ import ElementUI from 'element-ui'
 import './assets/css/index.scss'
 import Axios from 'axios'
 import '../theme/index.css'
-// 全局函数及变量
-import Global from './Global'
-Vue.use(Global)
 
+Vue.prototype.$target = 'http://localhost:8852/' // 本地后端地址
 Vue.prototype.$axios = Axios
 Axios.defaults.baseURL = process.env.BASE_API
 Vue.config.productionTip = false
